@@ -6,7 +6,7 @@ export default function useDemoChatbox() {
     name: 'Esther Howard',
     profileImg: '/common/avatar2.png'
   })
-  const [chatMessages, _setChatMessages] = useState([
+  const initChatMessage = [
     {
       itsMe: true,
       message: 'Are you ready?'
@@ -15,7 +15,8 @@ export default function useDemoChatbox() {
       itsMe: false,
       message: 'I have prepared everything'
     }
-  ])
+  ]
+  const [chatMessages, _setChatMessages] = useState(initChatMessage)
 
   const getData = localStorage.getItem('DEMO_SIMPLE_CHATBOX')
 
@@ -32,13 +33,14 @@ export default function useDemoChatbox() {
 
   // get local storage data
   useEffect(() => {
-    if (!ref.current && getData) {
-      setChatMessages(JSON.parse(getData))
-    } else {
-      setToLocal([])
-    }
+    // if (!ref.current && getData) {
+    // } else {
+    // }
+    if (!ref.current) {
+      !getData ? setToLocal(initChatMessage) : setChatMessages(JSON.parse(getData))
 
-    return () => (ref.current = true)
+      return () => (ref.current = true)
+    }
   }, [getData])
 
   useEffect(() => {

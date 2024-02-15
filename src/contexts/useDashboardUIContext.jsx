@@ -82,12 +82,4 @@ export function useDarkMode() {
       setToLocal(darkMode)
     }
   }, [darkMode])
-
-  // useEffect(() => {
-  //     // if(!ref.current){
-  //         setToLocal(darkMode)
-  //         setDarkMode(JSON.parse(getData))
-  //     //     return () => ref.current = true
-  //     // }
-  // }, [getData])
 }
