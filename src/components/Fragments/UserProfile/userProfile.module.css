@@ -1,0 +1,38 @@
+.user_profile {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 24px auto;
+}
+.user_profile__img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: var(--full-rounded);
+  z-index: 1;
+}
+.user_profile__btn_logout {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--full-rounded);
+  color: var(--text2);
+  border: none;
+  background-color: var(--second-color);
+  cursor: pointer;
+}
+.user_profile__btn_logout:hover {
+  transition: var(--trns-02) ease;
+  background-color: var(--hover-color1);
+}
+
+.user_profile__btn_logout:active {
+  transition: 0s;
+  opacity: 0.5;
+}
+
+.user_profile__btn_logout__icon {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+  transform: translateY(4px);
+}

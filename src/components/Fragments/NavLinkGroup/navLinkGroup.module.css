@@ -1,0 +1,29 @@
+.navlinks {
+  background-color: var(--second-color);
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 16px;
+  box-sizing: border-box;
+}
+.navlinks__link {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--full-rounded);
+  color: currentColor;
+  transition: var(--trns-04) var(--Cubic-Bezier1);
+}
+
+.navlinks__link__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.link_active {
+  color: white;
+  background-color: var(--accent-color1);
+}

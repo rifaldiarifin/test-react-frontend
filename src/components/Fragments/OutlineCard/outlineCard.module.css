@@ -1,0 +1,48 @@
+.outline_card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  grid-area: var(--card-grid-area);
+  border: 2px solid var(--separator);
+  border-radius: var(--rounded2);
+  padding: var(--main-padding);
+}
+
+.outline_card_preloader {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: 2px solid var(--separator);
+  border-radius: var(--rounded2);
+  padding: var(--main-padding);
+}
+
+.outline_card__header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.outline_card__body {
+  display: block;
+}
+
+.outline_card__title {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.outline_card__title2 {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
