@@ -189,7 +189,7 @@
     overflow-x: hidden; */
 }
 
-.aside_responsive{
+.aside_responsive {
   display: var(--aside-content2-display);
 }
 
