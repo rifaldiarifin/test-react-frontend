@@ -1,0 +1,119 @@
+.bar_balance {
+  min-width: 200px;
+}
+
+.credit_card {
+  min-height: 220px;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+  color: whitesmoke;
+  background: linear-gradient(-10deg, var(--accent-color1) 20%, var(--accent-color1));
+  overflow: hidden;
+}
+
+.credit_card__circle1,
+.credit_card__circle2 {
+  --size: 250px;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  min-width: var(--size);
+  min-height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--full-rounded);
+}
+.credit_card__circle1__span,
+.credit_card__circle2__span {
+  width: calc(var(--size) - 70px);
+  height: calc(var(--size) - 70px);
+  background-color: var(--accent-color1);
+  border-radius: var(--full-rounded);
+}
+
+.credit_card__circle1 {
+  top: -110px;
+  left: -100px;
+  background: linear-gradient(70deg, transparent 30%, rgba(255, 255, 255, 0.2));
+}
+.credit_card__circle2 {
+  bottom: -100px;
+  right: -120px;
+  background: linear-gradient(-10deg, transparent 30%, rgba(0, 0, 0, 0.15));
+}
+.coinstact_creditcard {
+  opacity: 0.9;
+  filter: saturate(1.4);
+  position: absolute;
+  width: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-40%) translateX(-50%);
+}
+
+.card_balance {
+  width: 250px;
+}
+
+.doughnut_percentage {
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.doughnut_percentage__percent {
+  font-size: 32px;
+  font-weight: 600;
+}
+.doughnut_percentage__description {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--disabled-color2);
+}
+
+.doughnut_percentage__labels {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.doughnut_percentage__labels__label {
+  --bg-dot: var(--second-color);
+  position: relative;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--disabled-color2);
+}
+.doughnut_percentage__labels__label::before {
+  content: '';
+  display: block;
+  background-color: var(--bg-dot);
+  width: 8px;
+  height: 8px;
+  border-radius: var(--full-rounded);
+}
+
+.bar_percentage {
+  height: 26px;
+  display: flex;
+  gap: 4px;
+}
+.bar_percentage__bar {
+  --bar-percentage: 0%;
+  --bar-bg-color: var(--second-color);
+  width: var(--bar-percentage);
+  height: 100%;
+  background-color: var(--bar-bg-color);
+  border-radius: 6px;
+}
