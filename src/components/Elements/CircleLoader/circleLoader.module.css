@@ -1,0 +1,32 @@
+.circle_loader {
+  --size: 60px;
+  --thickness: 6px;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border: var(--thickness) solid var(--accent-color1);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loaderRotate 0.8s linear infinite;
+}
+.circle_small {
+  --size: 16px;
+  --thickness: 3px;
+}
+.circle_medium {
+  --size: 40px;
+  --thickness: 5px;
+}
+.circle_large {
+  --size: 60px;
+  --thickness: 6px;
+}
+
+@keyframes loaderRotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
