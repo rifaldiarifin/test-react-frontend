@@ -138,25 +138,22 @@ export default function DashboardPage({ aside }) {
               <Analytics analyticsData={analyticsData} analyticsDatasetChart={analyticsDatasetChart} styles={styles} />
             </Suspense>
           </DashboardUI.GridLayouts>
-          {!aside && (
-            <>
-              <DashboardUI.GridLayouts>
-                <Suspense fallback={<Card.CardPreloader />}>
-                  <ExprensiveAndIncome styles={styles} />
-                </Suspense>
-              </DashboardUI.GridLayouts>
-              <DashboardUI.GridLayouts>
-                <Suspense fallback={<Card.CardPreloader />}>
-                  <LatestSpending />
-                </Suspense>
-              </DashboardUI.GridLayouts>
-              <DashboardUI.GridLayouts>
-                <Suspense fallback={<Card.CardPreloader />}>
-                  <GoToPremium />
-                </Suspense>
-              </DashboardUI.GridLayouts>
-            </>
-          )}
+
+          <DashboardUI.GridLayouts className={DashboardUI.styles.aside_responsive}>
+            <Suspense fallback={<Card.CardPreloader />}>
+              <ExprensiveAndIncome styles={styles} />
+            </Suspense>
+          </DashboardUI.GridLayouts>
+          <DashboardUI.GridLayouts className={DashboardUI.styles.aside_responsive}>
+            <Suspense fallback={<Card.CardPreloader />}>
+              <LatestSpending />
+            </Suspense>
+          </DashboardUI.GridLayouts>
+          <DashboardUI.GridLayouts className={DashboardUI.styles.aside_responsive}>
+            <Suspense fallback={<Card.CardPreloader />}>
+              <GoToPremium />
+            </Suspense>
+          </DashboardUI.GridLayouts>
         </DashboardUI.Main.Body.Dashboard>
       </DashboardUI.Main.Body>
       {/* End of Main > Body */}

@@ -141,13 +141,15 @@ const TitleParag = ({ text = "Let's make some magic here!" }) => {
 }
 DashboardUI.TitleParag = TitleParag
 
-const GridLayouts = ({ templateColms = null, children }) => {
+const GridLayouts = ({ templateColms = null, className = null, children }) => {
   return (
-    <div className={styles.grid_layouts} style={{ '--template-colms': templateColms }}>
+    <div className={`${styles.grid_layouts}${predictClass(() => className, className)}`} style={{ '--template-colms': templateColms }}>
       {children}
     </div>
   )
 }
 DashboardUI.GridLayouts = GridLayouts
+
+DashboardUI.styles = styles
 
 export default DashboardUI
