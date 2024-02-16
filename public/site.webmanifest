@@ -1,0 +1,7 @@
+{
+  "name": "Test Front-end App",
+  "short_name": "Test App",
+  "theme_color": "#535CE5",
+  "background_color": "#2D2D3C",
+  "display": "standalone"
+}
