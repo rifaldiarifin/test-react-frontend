@@ -40,7 +40,7 @@ export default function BalanceStatistics({ styles, miniLineDatasetChart, barDat
               6%
             </div>
           </div>
-          <p className="font-size-12 disabled-text-2">Always see your earnings updates</p>
+          <p className="font-size-12 disabled-text-1">Always see your earnings updates</p>
         </Card.Panel>
         <Card.Panel className={`${styles.bar_balance} dsp-flex align-itms-center overflow-hidden`}>
           <div className="post-reltv" style={{ width: '100%', height: '180px' }}>

@@ -12,7 +12,7 @@ export default function CardVisa({ styles }) {
       <span className={styles.credit_card__circle2}>
         <span className={styles.credit_card__circle1__span}></span>
       </span>
-      <img src={CoinStack} alt="Coin stack" width={200} height={100} className={styles.coinstact_creditcard} />
+      <img src={CoinStack} alt="Coin stack" width={200} height={100} className={styles.coinstack_creditcard} />
       <Card.Header className="align-itms-center">
         <CompanyLogo src={logoWhite} alt={'white logo'} />
         <span className="font-size-24 font-weg-700 font-italic">VISA</span>

@@ -60,7 +60,7 @@ export default function ListOfItemsToBuyAndChatbox({ clientProfile, chatMessages
                   ))}
                 </>
               ) : chatMessages && chatMessages?.length === 0 ? (
-                <p className="font-size-14 disabled-text-2 text-center">No message yet.</p>
+                <p className="font-size-14 disabled-text-2 text-center pad-y-20">No message yet.</p>
               ) : (
                 'Load Chat Message...'
               )}
