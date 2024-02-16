@@ -60,6 +60,7 @@ export function useDashboardUI() {
 // eslint-disable-next-line react-refresh/only-export-components
 export function useDarkMode() {
   const { darkMode, setDarkMode } = useContext(DashboardUIContext)
+  const [isLoad, setIsLoad] = useState(false)
   const getData = localStorage.getItem('DARK_MODE')
   const ref = useRef(false)
 
@@ -70,13 +71,13 @@ export function useDarkMode() {
   useEffect(() => {
     if (!ref.current) {
       getData && typeof JSON.parse(getData) === 'boolean' ? setDarkMode(JSON.parse(getData)) : setToLocal(false)
-
+      setIsLoad(true)
       return () => (ref.current = true)
     }
   }, [getData, setDarkMode])
 
   useEffect(() => {
-    if (ref.current) {
+    if (isLoad) {
       darkMode === true ? document.body.classList.add('dark') : document.body.classList.remove('dark')
       setToLocal(darkMode)
     }
