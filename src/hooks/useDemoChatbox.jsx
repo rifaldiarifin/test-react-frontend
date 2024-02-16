@@ -16,12 +16,15 @@ export default function useDemoChatbox() {
       message: 'I have prepared everything'
     }
   ]
-  const [chatMessages, _setChatMessages] = useState(initChatMessage)
+  const [chatMessages, _setChatMessages] = useState([])
 
   const getData = localStorage.getItem('DEMO_SIMPLE_CHATBOX')
 
   const setToLocal = (payload) => {
     localStorage.setItem('DEMO_SIMPLE_CHATBOX', JSON.stringify(payload))
+  }
+  const setClientProfile = ({ name, profileImg }) => {
+    _setClientProfile({ name, profileImg })
   }
   const setChatMessages = (payload) => {
     _setChatMessages(payload)
@@ -33,21 +36,22 @@ export default function useDemoChatbox() {
 
   // get local storage data
   useEffect(() => {
-    // if (!ref.current && getData) {
-    // } else {
-    // }
+    console.log('load outside', ref.current)
     if (!ref.current) {
-      !getData ? setToLocal(initChatMessage) : setChatMessages(JSON.parse(getData))
+      getData ? setChatMessages(JSON.parse(getData)) : setToLocal(initChatMessage)
 
+      console.log('load inside', ref.current)
       return () => (ref.current = true)
     }
   }, [getData])
 
   useEffect(() => {
+    console.log('hahahha outside', ref.current)
     if (ref.current) {
+      console.log('hahahha inside', ref.current)
       setToLocal(chatMessages)
     }
-  }, [chatMessages])
+  }, [chatMessages, ref])
 
-  return { clientProfile, chatMessages, sendMessage }
+  return { clientProfile, chatMessages, sendMessage, setClientProfile }
 }

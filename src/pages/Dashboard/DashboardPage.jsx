@@ -39,7 +39,7 @@ const ExprensiveAndIncomeAside = React.lazy(
   () => import('../../components/DashboardFragments/ExprensiveAndIncomeAside')
 )
 
-export default function DashboardPage({ aside }) {
+export default function DashboardPage() {
   const { clientProfile, chatMessages, sendMessage } = useDemoChatbox()
   // Init Chart.js
   ChartJS.register(

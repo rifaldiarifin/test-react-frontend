@@ -68,17 +68,16 @@ export function useDarkMode() {
   }
 
   useEffect(() => {
-    if (!ref.current && getData && typeof JSON.parse(getData) === 'boolean') {
-      setDarkMode(JSON.parse(getData))
-    } else {
-      setToLocal(false)
+    if (!ref.current) {
+      getData && typeof JSON.parse(getData) === 'boolean' ? setDarkMode(JSON.parse(getData)) : setToLocal(false)
+
+      return () => (ref.current = true)
     }
-    return () => (ref.current = true)
-  }, [getData])
+  }, [getData, setDarkMode])
 
   useEffect(() => {
     if (ref.current) {
-      darkMode ? document.body.classList.add('dark') : document.body.classList.remove('dark')
+      darkMode === true ? document.body.classList.add('dark') : document.body.classList.remove('dark')
       setToLocal(darkMode)
     }
   }, [darkMode])
