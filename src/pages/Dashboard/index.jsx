@@ -58,7 +58,7 @@ export default function Dashboard() {
         </DashboardUI.Nav.Body>
 
         <DashboardUI.Nav.Footer>
-          <UserProfile src="/common/avatar1.png" />
+          <UserProfile src="/common/avatar1.webp" />
           <Button
             // style='regular'
             color="classic"

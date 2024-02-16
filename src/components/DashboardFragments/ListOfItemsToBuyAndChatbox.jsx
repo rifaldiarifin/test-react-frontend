@@ -53,7 +53,7 @@ export default function ListOfItemsToBuyAndChatbox({ clientProfile, chatMessages
                     <SimpleChatBox.Chat
                       key={index}
                       message={data.message}
-                      src={data.itsMe ? '/common/avatar1.png' : clientProfile.profileImg}
+                      src={data.itsMe ? '/common/avatar1.webp' : clientProfile.profileImg}
                       alt={`Chat ${index}`}
                       itsMe={data.itsMe}
                     />

@@ -19,19 +19,19 @@ export default function LatestSpending() {
       <Card.Panel>
         <ItemInfo>
           <ItemInfo.Item
-            src="/common/avatar2.png"
+            src="/common/avatar2.webp"
             alt="user profile"
             title="Online store"
             description="May 30,2023 at 08:00 pm"
           />
           <ItemInfo.Item
-            src="/common/avatar3.png"
+            src="/common/avatar3.webp"
             alt="user profile"
             title="Pay the hospital"
             description="May 28,2023 at 10:00 pm"
           />
           <ItemInfo.Item
-            src="/common/avatar4.png"
+            src="/common/avatar4.webp"
             alt="user profile"
             title="Tickets"
             description="May 10,2023 at 12:00 pm"

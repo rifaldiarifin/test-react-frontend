@@ -19,7 +19,7 @@ export default function LastTransactions() {
       <Card.Panel>
         <ItemLists>
           <ItemLists.List
-            src="/common/avatar4.png"
+            src="/common/avatar4.webp"
             alt="user profile"
             title="Bessie Cooper"
             description="02 July 2023"
@@ -27,7 +27,7 @@ export default function LastTransactions() {
             price={3000}
           />
           <ItemLists.List
-            src="/common/avatar3.png"
+            src="/common/avatar3.webp"
             alt="user profile"
             title="Guy Hawkins"
             description="02 July 2023"
@@ -35,7 +35,7 @@ export default function LastTransactions() {
             price={1970}
           />
           <ItemLists.List
-            src="/common/blank_user.png"
+            src="/common/blank_user.webp"
             alt="user profile"
             title="Floyd Miles"
             description="02 July 2023"

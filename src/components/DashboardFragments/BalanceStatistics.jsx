@@ -28,6 +28,7 @@ export default function BalanceStatistics({ styles, miniLineDatasetChart, barDat
               src={CoinStack}
               alt="coin stack"
               width={40}
+              height={34}
               className="pointer-none"
               style={{ filter: 'saturate(1.4)' }}
             />
