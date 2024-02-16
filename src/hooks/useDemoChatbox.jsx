@@ -22,25 +22,21 @@ export default function useDemoChatbox() {
   const getData = localStorage.getItem('DEMO_SIMPLE_CHATBOX')
 
   const setToLocal = (payload) => {
-    console.log(payload)
     localStorage.setItem('DEMO_SIMPLE_CHATBOX', JSON.stringify(payload))
   }
   const setClientProfile = ({ name, profileImg }) => {
     _setClientProfile({ name, profileImg })
   }
   const setChatMessages = (payload) => {
-    console.log('load inside', payload)
     _setChatMessages(payload)
   }
 
   const sendMessage = (message) => {
-    console.log(message)
     _setChatMessages([...chatMessages, { message, itsMe: true }])
   }
 
   // get local storage data
   useEffect(() => {
-    console.log('load outside', ref2.current)
     if (!ref2.current) {
       getData ? setChatMessages(JSON.parse(getData)) : setToLocal(initChatMessage)
       setIsLoad(true)
@@ -49,7 +45,6 @@ export default function useDemoChatbox() {
   }, [getData])
 
   useEffect(() => {
-    console.log('chat')
     if (isLoad) {
       setToLocal(chatMessages)
     }
