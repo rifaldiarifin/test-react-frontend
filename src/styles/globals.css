@@ -113,6 +113,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /*  
@@ -486,7 +487,7 @@ body .txt-left {text-align: left;}
 body .txt-right {text-align: right;}
 
 /* width & height */
-body .w-fit-content {width: fit-content;}
+body .w-fit-content {width: -moz-fit-content;width: fit-content;}
 body .h-fit-content {height: fit-content;}
 body .w-100 {width: 100%;}
 body .h-100 {height: 100%;}
