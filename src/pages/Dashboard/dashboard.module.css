@@ -44,7 +44,7 @@
   right: -120px;
   background: linear-gradient(-10deg, transparent 30%, rgba(0, 0, 0, 0.15));
 }
-.coinstact_creditcard {
+.coinstack_creditcard {
   opacity: 0.9;
   filter: saturate(1.4);
   position: absolute;
@@ -116,4 +116,10 @@
   height: 100%;
   background-color: var(--bar-bg-color);
   border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .coinstack_creditcard {
+    width: 110px;
+  }
 }

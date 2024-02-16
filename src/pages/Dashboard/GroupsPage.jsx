@@ -1,6 +1,8 @@
 import DashboardUI from '../../components/Fragments/DashboardUI'
+import { useDocumentTitle } from '../../hooks/useDocumentHandler'
 
 export default function GroupsPage() {
+  useDocumentTitle('Groups')
   return (
     <>
       <DashboardUI.Main.Header>

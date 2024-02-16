@@ -22,6 +22,7 @@ import {
 import Card from '../../components/Fragments/Card'
 import OutlineCard from '../../components/Fragments/OutlineCard'
 import useDemoChatbox from '../../hooks/useDemoChatbox'
+import { useDocumentTitle } from '../../hooks/useDocumentHandler'
 
 const BalanceStatistics = React.lazy(() => import('../../components/DashboardFragments/BalanceStatistics'))
 const CardVisa = React.lazy(() => import('../../components/DashboardFragments/CardVisa'))
@@ -40,7 +41,8 @@ const ExprensiveAndIncomeAside = React.lazy(
 )
 
 export default function DashboardPage() {
-  const { clientProfile, chatMessages, sendMessage } = useDemoChatbox()
+  useDocumentTitle()
+  const { clientProfile, chatMessages, sendMessage, setChatMessages } = useDemoChatbox()
   // Init Chart.js
   ChartJS.register(
     CategoryScale,
@@ -126,6 +128,7 @@ export default function DashboardPage() {
                 chatMessages={chatMessages}
                 clientProfile={clientProfile}
                 sendMessage={sendMessage}
+                setChatMessages={setChatMessages}
               />
             </Suspense>
           </DashboardUI.GridLayouts>
